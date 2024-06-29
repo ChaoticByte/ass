@@ -1,0 +1,8 @@
+# Example server config file
+host: ''
+port: 8022
+clients:
+  # This are just examples. Please generate your own keypair for each client you want to add.
+  # username: public-key
+  example1: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEg9AzPuPe/zv0HszL+aRdJgZ8DPwVLV59FJoUHe7kWH
+  example2: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQH6ESwEHVvlbxZJd7JhTPWXy3yQ5Zaf8qVBxzf6Td/
