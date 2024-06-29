@@ -70,9 +70,10 @@ func RemoveFromSessionList(idx int) {
 
 func BroadcastLine(line []byte) {
 	if logFlag { log.Printf("%s", line) } // output message
-	sessions := sessionList // create snapshot of client list
-	for i := range(len(sessions)) {
-		session := sessions[i]
+	sessionListMutex.Lock()
+	defer sessionListMutex.Unlock()
+	for i := range(len(sessionList)) {
+		session := sessionList[i]
 		if session != nil {
 			(*session).Write(line)
 		}
