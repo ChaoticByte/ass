@@ -7,4 +7,4 @@ then
     ver="${ver}-dev"
 fi
 
-go build -ldflags="-X 'main.Version=${ver}'" -o ass_v${ver}
+go build -ldflags="-X 'main.Version=${ver}'" -o ass_v${ver} $@
