@@ -5,6 +5,8 @@ package main
 
 import "os"
 
+var Version = "dev"
+
 func main() {
 	if ParseCommandline() {
 		ParseConfig(configFilepath)
